@@ -1,0 +1,35 @@
+label input[type="checkbox"] {
+    display: none; /*hides ugly toggle*/
+}
+label input[type="checkbox"] ~ span {
+    position: relative;
+    display: inline-block;
+    padding: 3px 0 3px 25px;
+}
+label input[type="checkbox"] ~ span:before {
+    content: "^";
+    text-align: center;
+    font-size: 13px;
+    position: absolute;
+    display: block;
+    width: 18px;
+    height: 18px;
+    background: #fff;
+    color: #fff;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    transition: all 500ms ease-in-out;
+}
+
+label input[type="checkbox"]:checked ~ span:before {
+    transform: rotatez(180deg);
+    background: #29d;
+    border-color: #29d;
+}
+.titleLine {
+    text-decoration: line-through;
+}
